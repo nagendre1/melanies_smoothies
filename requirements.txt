@@ -8,3 +8,4 @@
 #  - streamlit=
 snowflake-snowpark-python
 streamlit
+requests
