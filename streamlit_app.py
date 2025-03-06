@@ -38,11 +38,11 @@ if ingredients_list:
         ingredients_string += fruit_choosen + ' '
         st.subheader(fruit_choosen + ' Nutrition Information')
 
-    #st.text(ingredients_string)
+        #st.text(ingredients_string)
 
-    smoothiefroot_response = requests.get("https://my.smoothiefroot.com/api/fruit/" + fruit_choosen)
-    #st.text(smoothiefroot_response.json())
-    st_df = st.dataframe(data = smoothiefroot_response.json() , use_container_width = True)
+        smoothiefroot_response = requests.get("https://my.smoothiefroot.com/api/fruit/" + fruit_choosen)
+        #st.text(smoothiefroot_response.json())
+        st_df = st.dataframe(data = smoothiefroot_response.json() , use_container_width = True)
 
     my_insert_stmt = """ Insert into SMOOTHIES.PUBLIC.ORDERS(  name_on_order , ingredients)
             values (' """ + name_on_order + """ ' , ' """ + ingredients_string + """ ') """
